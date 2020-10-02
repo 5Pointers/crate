@@ -1,0 +1,11 @@
+syntax = "proto3";
+package storage;
+
+message DataEntry {
+    string key = 1;
+    string value = 2;
+}
+
+service DataStorageService {
+    rpc Set(DataEntry) returns (DataEntry) {}    
+}

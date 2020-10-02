@@ -19,6 +19,8 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      - name: Debugging attempt
+        run: pwd && ls -lah 
       - name: Setup Go environment
         uses: actions/setup-go@v2.1.3
         with:

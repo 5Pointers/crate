@@ -1,0 +1,19 @@
+syntax = "proto3";
+package storage;
+
+message DataEntry {
+    map<string, string> payload = 1;
+}
+
+message Query {
+    map<string, string> payload = 1;
+}
+
+message Empty {}
+
+service DataStorageService {
+    rpc Set(DataEntry) returns (DataEntry) {}
+    rpc Find(Query) returns (stream DataEntry) {}
+    rpc FindFirst(Query) returns (DataEntry) {}
+    rpc Delete(Query) returns (Empty) {}
+}

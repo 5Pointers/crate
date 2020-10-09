@@ -40,6 +40,7 @@ func main() {
 	if err != nil {
 		log.Fatalf("failed to listen: %v", err)
 	}
+
 	var opts []grpc.ServerOption
 	grpcServer := grpc.NewServer(opts...)
 	storage.RegisterDataStorageServiceServer(grpcServer, getServer())

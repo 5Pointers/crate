@@ -28,7 +28,7 @@ func main() {
 	if err != nil {
 		log.Fatalf("could not greet: %v", err)
 	}
-	log.Println("It worked")
+	log.Println("Response:")
 	log.Println(r)
-	// log.Printf("Greeting: %s", r.GetMessage())
+	log.Println("===")
 }

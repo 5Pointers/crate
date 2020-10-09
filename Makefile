@@ -10,5 +10,6 @@ build:
 run: build
 	@./$(BIN_PATH)/$(BIN_NAME)
 
-# TODO: implement reload
-dev: run
+dev: 
+	modd
+	
